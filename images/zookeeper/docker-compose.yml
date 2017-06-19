@@ -1,0 +1,14 @@
+#docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /data:/data -v /datalog:/datalog --restart=always --name zookeeper zookeeper
+
+zookeeper:
+  image:  zookeeper
+  container_name:  zookeeper
+  ports:
+    - 2181:2181
+    - 2888:2888
+    - 3888:3888
+  volumes:
+    - /home/docker/container/zookeeper/data:/data
+    - /home/docker/container/zookeeper/logs:/datalog
+  restart:  always
+  privileged:  true
