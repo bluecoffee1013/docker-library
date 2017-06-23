@@ -37,7 +37,7 @@ RUN set -ex; \
 	done; \
 	\
 # we shouldn't need much RAM to test --version (default is 2gb, which gets Jenkins in trouble sometimes)
-	export ES_JAVA_OPTS='-Xms32m -Xmx32m'; \
+	export ES_JAVA_OPTS='-Xms1024m -Xmx1024m'; \
 	if [ "${ELASTICSEARCH_VERSION%%.*}" -gt 1 ]; then \
 		elasticsearch --version; \
 	else \

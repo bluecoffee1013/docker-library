@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-docker rm -f elasticsearch
+docker stop elasticsearch
+docker rm -v elasticsearch
 docker rmi elasticsearch
 if [ ! -f "elasticsearch-5.4.2.tar.gz" ]; then
  wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.2.tar.gz
