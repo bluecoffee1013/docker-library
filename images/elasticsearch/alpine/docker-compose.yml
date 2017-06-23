@@ -1,0 +1,12 @@
+elasticsearch:
+  image:  elasticsearch
+  container_name:  elasticsearch
+  ports:
+    - 9200:9200
+    - 9300:9300
+  volumes:
+    - ./data:/usr/share/elasticsearch/data
+    - ./logs:/usr/share/elasticsearch/logs
+    - ./config:/usr/share/elasticsearch/config
+  restart:  always
+  privileged:  true
