@@ -1,0 +1,9 @@
+rap:
+  image:  rap
+  container_name:  rap
+  ports:
+    - 9001:8080
+  volumes:
+    - ./logs:/usr/local/tomcat/logs
+  restart:  always
+  privileged:  true
